@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <script src="JS/MetodoBiseccion.Js" defer></script>
+    <script src="JS/char.js"></script>
+    <title>Metodo Biseccion.com</title>
+</head>
+<body>
+    
+    <nav>
+    <header>
+        
+        <h1>Metodo Numerico</h1>
+
+        <h2>Metodo de Biseccion</h2>
+        <h3>En esta pagina web, podras resolver cualquier ecuacion sobre el metodo numerico de "Biseccion"</h3>
+    </header>
+    </nav>
+
+    <hr size="10px">
+
+    <div class="Bloque2">
+        <section class="Seccion3">
+            <img src="Imagenes/img1.png" alt="Imagen1" class="ImgMetodo ImgZomm">
+        </section>
+
+        <section class="Seccion4">
+            <p class="Texto">
+                El método de bisección es un algoritmo de búsqueda de raíces <br>
+                que trabaja dividiendo el intervalo a la mitad <br>
+                y seleccionando el subintervalo que tiene la raíz.
+
+                <br>
+                <br>
+
+                Esto se logra llevar a cabo a través de varias interaciones que son aplicadas en un intervalo <br>
+                para por medio de ello encontrar la raíz de la función.
+            </p>
+        </section>
+    </div>
+
+        <div class="Bloque2">
+            <section class="Seccion3">
+                <p class="Texto">
+                    Podras ingresar la Funcion F(x) que quieras y podras calcular la aproximacion del punto sobre el intervalo que deseas
+                    <br>
+                    <br>
+                    Este es uno de los métodos mas sencillos y de fácil intuición para resolver ecuaciones en una variable,<br>
+                    también conocido como método del intervalo medio
+                </p>
+            </section>
+
+            <section class="Seccion4">
+                <img src="Imagenes/metodoImg.webp" alt="MetodoBiseccion" class="ImgMetodo ImgZomm">
+            </section>
+        </div>
+
+
+        
+        <br>
+                <h1>Calculadora Metodo Lagrange</h1>
+                <h2>Ingresa los datos a continuacion</h2>
+              
+          
+                 
+                    
+                    <form action="" method="dialog">
+        
+                        <div class="Bloque1">
+                            <section class="Seccion1">
+                                
+                                <input type="text" id="txtFuncion" placeholder="Example: (3*(x*x))-4" class="Inputs">
+                                <br>
+                                <br>
+                                <input type="text" id="txtXA" placeholder="Ingresa valor de XA" class="Inputs">
+                                <br>
+                                <br>
+                                <input type="text" id="txtXB" placeholder="Ingresa valor de XB" class="Inputs">
+                                <br>
+                                <br>
+                                <input type="text" id="txtPasos" placeholder="Ingresa cant. Iteraciones que deceas hacer" class="Inputs">
+                                <br>
+                                <br>
+                                <input type="submit" value="Calcular" id="btnCalcular" class="Inputs efect">
+                                
+                                <br><br><br>
+                                <h3>Requisitos previos del método:</h3>
+                                <p class="TextoMet ImgZomm"> 
+                                    El método como entrada requiere, un intervalo donde se encuentran las raíz en donde f(a) y f(b); <br>
+                                    También opcionalmente se puede incluir como parámetro un numero máximo de iteraciones para evitar un gran numero de iteraciones
+                                </p>
+        
+                            </section>
+        
+                            <section class="Seccion2">                 
+                                <p id="confirmacion" class="Texto"></p>
+                                <h3>Resultado:</h3>
+                                <br>
+                                <br>
+                                <p id="ResultXR" class="Texto ImgZomm efect"></p>
+                            </section>
+                        </div>
+                     
+                    </form>
+              
+
+                    <h1>Grafica</h1>
+                    <h2>Al dar calcular, aparecera la grafica correspondiente</h2>
+                    <canvas id="grafica"></canvas>
+           
+            
+            <!--            
+            Inicia Tabla 
+
+            <table align="center">
+                <tr>
+                    <th style="background-color: rgb(231, 51, 51)">
+                        Pasos
+                    </th>
+                
+                    <th style="background-color:rgb(231, 51, 51)">
+                        XA
+                    </th>
+
+                    <th style="background-color:rgb(231, 51, 51)">
+                        XB
+                    </th>
+                    
+                    <th style="background-color:rgb(231, 51, 51)">
+                        XR
+                    </th>
+
+                    <th style="background-color:rgb(231, 51, 51)">
+                        FXA
+                    </th>
+
+                    <th style="background-color:rgb(231, 51, 51)">
+                        FXR
+                    </th>
+
+                    <th style="background-color:rgb(231, 51, 51)">
+                        FXA * FXB
+                    </th>
+                </tr>
+                
+            <!-- FILA 1 -->
+            <tr id="Resultados">
+                <td>
+                    <p id="PasosX0"></p>
+                </td>
+                    
+                <td>
+                    <p id="X0"></p>
+                </td>
+                    
+                <td>
+                    <p id="Fx0"></p>
+                </td>
+                
+            </tr>
+                    
+            <!-- FILA 2 -->
+                
+            <tr>
+                <td>
+                    <p id="PasosX1"></p>
+                </td>
+                
+                <td>
+                    <p id="X1"></p>
+                </td>
+                    
+                <td>
+                    <p id="Fx1"></p>
+                </td>
+                
+            </tr>
+
+            <!-- FILA 3 -->
+                
+            <tr>
+                <td>
+                    <p id="PasosX2"></p>
+                </td>
+
+                <td>
+                    <p id="X2"></p>
+                </td>
+                
+                <td>
+                    <p id="Fx2"></p>
+                </td>
+
+            </tr>
+
+            </table>
+
+       
+
+</body>
+</html>
